@@ -1,5 +1,5 @@
 module.exports = ({ env }) => ({
-  url: env("your-app-url"),
+  url: env("https://workflow-api-s.herokuapp.com/"),
   proxy: true,
-  app: { keys: env.array("APP_KEYS", ["yourkey1", "yourkey2"]) },
+  app: { keys: env.array("APP_KEYS", ["myKey", "extraKey"]) },
 });
