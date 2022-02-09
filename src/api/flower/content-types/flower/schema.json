@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "flowers",
+  "info": {
+    "singularName": "flower",
+    "pluralName": "flowers",
+    "displayName": "flower"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "description": {
+      "type": "text"
+    },
+    "seasons": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::season.season",
+      "inversedBy": "flowers"
+    }
+  }
+}
